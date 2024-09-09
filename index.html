@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Movie Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcomePage" class="welcome-page">
+        <h1>Welcome to the Movie Guessing Game!</h1>
+        <p>Test your movie knowledge and have fun guessing!</p>
+        <button id="startBtn" onclick="startGame()">Start Game</button>
+    </div>
+    <div id="container" class="container">
+        <div class="game-section" id="game-section">
+            <img id="movie-image" src="" alt="Movie Image">
+            <div class="navigation">
+                <button onclick="previousImage()">Previous</button>
+                <div class="timer" id="timer">00:30</div>
+                <button onclick="nextImage()">Next</button>
+            </div>
+        </div>
+        <div class="answer-section" id="answer-section">
+            <h2>The correct movie name is: <span id="movie-name"></span></h2>
+            <button onclick="continueGame()">Continue</button>
+        </div>
+        <div class="participants-section">
+            <h2>Participants</h2>
+            <ul id="participants-list">
+                <li onclick="increaseScore(this)">Vishal: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Santosh: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Soumya: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Prathamesh: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Shrihari: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Suribabu: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Srikanth Baddam: <span class="score">0</span></li>
+                <!--<li onclick="increaseScore(this)">Shrikant Joshi: <span class="score">0</span></li>-->
+                <li onclick="increaseScore(this)">Varalakshmi: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Zahiruddin: <span class="score">0</span></li>
+                <li onclick="increaseScore(this)">Ria: <span class="score">0</span></li>
+            </ul>
+            <button id="endBtn" onclick="endGame()">The End</button>
+        </div>
+    </div>
+    <div id="winner-section" class="winner-section hidden">
+        <h2>The Winner is: <span id="winner-name"></span></h2>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
